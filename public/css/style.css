@@ -8,12 +8,12 @@
 body {
     background: url('../imgs/m.jpg') no-repeat fixed;
     background-size: 100vw 100vh;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
 h1 {
     color: white;
-    font-family:'Cream Cake', sans-serif;
+    font-family: 'Cream Cake', sans-serif;
     font-size: 50px;
 }
 
@@ -24,7 +24,6 @@ main {
     align-items: center;
     width: 100%;
     height: 100vh;
-    
 }
 
 form {
@@ -42,7 +41,7 @@ form {
     transition: .5s ease;
 }
 
-form div{
+form div {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -57,7 +56,7 @@ form div{
     align-items: center;
 }
 
-label{
+label {
     font-family: 'Comfortaa', sans-serif;
     font-size: 30px;
     color: white;
@@ -67,11 +66,14 @@ input {
     filter: blur(0px);
     font-size: 20px;
 }
-.value{
+
+.value {
     height: 30px;
 }
 
-#name, #email, #pass {
+#name,
+#email,
+#pass {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.281);
     border: none;
@@ -81,7 +83,7 @@ input {
     transition: 1s ease;
 }
 
-.novalue{
+.novalue {
     height: 0;
 }
 
@@ -89,12 +91,16 @@ input {
     height: 30px;
 }
 
-#name:hover, #email:hover, #pass:hover{
+#name:hover,
+#email:hover,
+#pass:hover {
     height: 30px;
     transition: .5s ease;
 }
 
-#name::placeholder, #email::placeholder, #pass::placeholder{
+#name::placeholder,
+#email::placeholder,
+#pass::placeholder {
     color: rgb(51, 51, 51);
 }
 
@@ -103,7 +109,7 @@ input {
     align-items: center;
 }
 
-#login_btn{
+#login_btn {
     width: 40%;
     height: 30px;
     background-color: rgb(255, 255, 255);
@@ -115,33 +121,36 @@ input {
     transition: 1s ease;
 }
 
-#login_btn:hover{
+#login_btn:hover {
     background-color: rgb(236, 236, 236);
     width: 50%;
     transition: .5s ease;
 }
 
-#login_btn:active{
+#login_btn:active {
     background-color: rgb(224, 221, 221);
 }
 
-.sigin, .back {
+.sigin,
+.back {
     justify-content: center;
     align-items: center;
 }
 
-#sigin, #back{
+#sigin,
+#back {
     width: 30%;
     height: 20px;
     color: white;
     font-size: 15px;
     font-family: 'Comfortaa';
-    text-align: center;       
+    text-align: center;
     text-decoration: none;
     transition: 1s ease;
 }
 
-#sigin:hover, #back:hover{
+#sigin:hover,
+#back:hover {
     color: azure;
     text-decoration: underline;
     transition: .5s ease;
@@ -151,7 +160,7 @@ input {
     font-size: 20px;
 }
 
-.cursor{
+.cursor {
     display: none;
     position: fixed;
     height: 50px;
@@ -169,14 +178,27 @@ form:hover {
     transition: .3s ease;
 }
 
-form:hover~.cursor{
+form:hover~.cursor {
     display: block;
     background-color: rgba(255, 255, 255, 0.452);
 }
 
 @media screen and (max-width:425px) {
-    form{
+    form {
         transform: scale(1.1);
         width: 80%;
+    }
+    #sigin,
+    #back {
+        width: 40%;
+        height: 20px;
+        font-size: 20px;
+    }
+    #login_btn {
+        width: 80%;
+        height: 50px;
+    }
+    label {
+        font-size: 23px;
     }
 }
