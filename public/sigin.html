@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Account</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+    body {
+        background: url('../imgs/m2.jpg') no-repeat fixed;
+        background-size: 100vw 100vh;
+        overflow: hidden;    
+    }
+</style>
+<body>
+    <main>
+    <h1>Create Account</h1>
+    <form action="/create" method="post">
+        <div class="container">
+            <div>
+                <label for="name">Username</label>
+                <input type="text" name="name" required id="name" class="novalue">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" required id="email" class="novalue">
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" name="pass" required id="pass" class="novalue" minlength="6" maxlength="20">
+            </div>
+            <div class="btn">
+                <input type="submit" value="Create" id="login_btn">
+            </div>
+        </div>
+        <div class="back">
+            <a id="back" href="/">Back</a>
+        </div>        
+    </form>
+
+    <div class="cursor"></div>
+    
+    </main>
+    <script src="./js/cursor.js"></script>
+</body>
+</html>

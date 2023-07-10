@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+    <h1>Welcome</h1>
+    <form action="/login" method="post">
+        <div class="container">
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" required id="email" class="novalue">
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" name="pass" required id="pass" class="novalue">
+            </div>
+            <div class="btn">
+                <input type="submit" value="Log in" id="login_btn">
+            </div>
+        </div>
+        <div class="sigin">
+            <a id="sigin" href="/sigin">Sig In</a>
+        </div>        
+    </form>
+
+    <div class="cursor"></div>
+    
+    </main>
+    <script src="./js/cursor.js"></script>
+</body>
+</html>

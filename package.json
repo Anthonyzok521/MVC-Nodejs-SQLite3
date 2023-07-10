@@ -1,0 +1,17 @@
+{
+    "name": "mvc",
+    "version": "1.0.0",
+    "description": "MVC with SQL",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js",
+        "dev": "nodemon *.*"
+    },
+    "author": "acgames",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.9",
+        "sqlite3": "^5.1.6"
+    }
+}

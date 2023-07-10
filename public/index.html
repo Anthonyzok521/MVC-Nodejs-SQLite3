@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <nav>
+        <a href="/">Sig Out</a>
+        <h1>My Notes</h1>
+    </nav>
+
+    <main>
+        <form id="note" action="/edit/" method="post">
+            <% for(const d of data) { %>
+                <div class="note">
+
+                    <div class="options">
+                        <input type="text" value="<%= d.title %>" readonly>
+                        <a href="#edit"><img src="./imgs/icons/e.png" alt="Edit"></a>
+                        <a href="/delete/?id=<%= d.id %>"><img src="./imgs/icons/r.png" alt="Remove"></a>
+                        <div id="btn_update"><input type="submit" value=""><img src="./imgs/icons/s.png" alt="<%= d.id %>"><img src="./imgs/icons/c.png" alt="Cancel"></div>
+                    </div>
+                    <textarea readonly><%= d.description %></textarea>
+                </div>
+                <% } %>
+                    <div class="add">+</div>
+        </form>
+        <form id="new" action="/new" method="post">
+            <div>
+                <label for="title">Title</label>
+                <input type="text" name="title" value="">
+            </div>
+            <div>
+                <label for="text">Description</label>
+                <textarea name="description" cols="30" rows="10"></textarea>
+            </div>
+            <div class="btns">
+                <input type="submit" value="New" id="btn_new">
+                <input type="button" value="Cancel" id="btn_cancel">
+            </div>
+        </form>
+    </main>
+    <script src="./js/cards.js"></script>
+</body>
+
+</html>
